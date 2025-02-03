@@ -24,11 +24,30 @@ pip install -e CLIP/
 
 ## Usage
 
+### Dataset
+Please divide paired images and masks by train, val, and test. For example:
+
+``` 
+DATA_FOLDER
+├── images
+│   ├── train
+│   ├── val
+│   └── test
+└── masks
+    ├── train
+    ├── val
+    └── test
+```
+The matched image and mask have the same name, mask values are in [0, 1, 2], 0 for background, 1 for foreground, and 2 for lesions. The Mass Radiomic Features are stored in 'files/trainset_normalized.csv', 'files/valset_normalized.csv', and 'files/testset_normalized.csv', respectively.
+
 ### Training
+Download image-conditioned stable diffusion checkpoint:  
+`wget https://cv.cs.columbia.edu/zero123/assets/sd-image-conditioned-v2.ckpt`
 
 ```
 source train.sh
 ```
+config file is in 'configs/train.yaml', you can modify the parameters in the file.
 ### Inference
 ```
 python inference.py
