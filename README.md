@@ -1,9 +1,9 @@
 # Joint Holistic and Lesion Controllable Mammogram Synthesis via Gated Conditional Diffusion Model
-### IJCNN 2025
+### ACMMM 2025
 
 This is official PyTorch implementation of our Gated Conditional Diffusion Model (GCDM) for controllable mammogram synthesis. For technical details, please refer to:
 
-Joint Holistic and Lesion Controllable Mammogram Synthesis via Gated Conditional Diffusion Model. [IJCNN 2025]
+Joint Holistic and Lesion Controllable Mammogram Synthesis via Gated Conditional Diffusion Model. 
 
 Overall Framework of the proposed GCDM:
 <p align="center">
