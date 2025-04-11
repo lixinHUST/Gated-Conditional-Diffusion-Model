@@ -487,13 +487,11 @@ class GateFusionModel(nn.Module):
     def __init__(self, m=5, n=5, k=5):
         super(GateFusionModel, self).__init__()
         
-        # 假设输入向量的长度
         self.input_dim_1 = 768
         self.input_dim_2 = 67
         self.m=m
         self.n=n
         self.k=k
-        # 1D卷积层
         self.conv1d_1 = nn.Conv1d(in_channels=1, out_channels=m, kernel_size=5, stride=1, padding=2)
         self.conv1d_2 = nn.Conv1d(in_channels=1, out_channels=n, kernel_size=5,stride=1, padding=2)
         
@@ -504,7 +502,6 @@ class GateFusionModel(nn.Module):
         nn.Sigmoid()
         )
         
-        # 最终卷积层
         self.conv1d_final = nn.Conv1d(in_channels=k, out_channels=2 * k, kernel_size=1)
         self.linear = nn.Linear(768 + 67, 768)
 
